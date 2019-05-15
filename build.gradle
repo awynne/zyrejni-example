@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'application'
+
+mainClassName = mainClass
+
+group = 'org.zeromq.zyre'
+version = '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal() 
+    maven { url "https://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.zeromq', name: 'czmq-jni', version:'4.2.1'
+    compile group: 'org.zeromq', name: 'zyre-jni', version:'2.0.1'
+}
